@@ -1,0 +1,27 @@
+
+Halcon 그래픽카드 가속
+		Open_Compute_Devices()
+		query_available_compute_devices(&dev);
+		open_compute_device(dev, &handle);
+		activate_compute_device(handle);
+		
+		~
+		
+		deactivate_compute_device (handle);
+		
+MFC Command line
+	CWinApp *App = AfxGetApp();
+	CString test;
+	test= App->m_lpCmdLine;
+
+
+
+void C_VisionModule::MakeDefaultInspPara()
+
+get_system('width',Width)
+get_system('height',Height)
+set_part(WindowHandle,0,0,Height-1,Width-1)
+disp_image(Image,WindowHandle)
+draw_rectangle1(WindowHandle,Row1,Column1,Row2,Column2)
+set_part(WindowHandle,Row1,Column1,Row2,Column2)
+disp_image(Image,WindowHandle)
